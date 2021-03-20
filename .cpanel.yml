@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/posxgabw/shenovate.com/
-    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -r * $DEPLOYPATH
