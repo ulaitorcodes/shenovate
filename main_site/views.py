@@ -13,12 +13,12 @@ def home(request):
 
 def about_page(request):
     return render(request, 'about.html', {
-        'page_title' : 'About | Shenovate',
+        
     })
 
 def join(request):
     return render(request, 'join.html', {
-        'page_title' : pagetitles[4],
+        
     })
 
 
