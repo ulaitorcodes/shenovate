@@ -1,0 +1,110 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_content %}
+
+  <div class="container mb-3">
+    <div class="row">
+      <div class="col-md-3"></div>
+
+      <div class="col-md-6 pb-5 pt-30 ml-30">
+       <form class="needs-validation wizard" novalidate>
+            <div class="wizard-body pt-2">
+              {% comment %} <div class="d-sm-flex justify-content-between pb-2"><a class="btn btn-secondary btn-sm btn-block my-2 mr-3" href="#"><i class="socicon-facebook"></i>&nbsp;Login</a><a class="btn btn-secondary btn-sm btn-block my-2 mr-3" href="#"><i class="socicon-twitter"></i>&nbsp;Login</a><a class="btn btn-secondary btn-sm btn-block my-2 mr-3" href="#"><i class="socicon-linkedin"></i>&nbsp;Login</a></div> {% endcomment %}
+              <hr>
+              <h3 class="h5 pt-4 pb-2">Login to your Account</h3>
+              <div class="input-group form-group">
+                <div class="input-group-prepend"><span class="input-group-text"><i class="fe-icon-mail"></i></span></div>
+                <input class="form-control" type="email" placeholder="Email" required>
+                <div class="invalid-feedback">Please enter your email!</div>
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend"><span class="input-group-text"><i class="fe-icon-lock"></i></span></div>
+                <input class="form-control" type="password" placeholder="Password" required>
+                <div class="invalid-feedback">Please enter valid password!</div>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" checked id="remember-me">
+                  <label class="custom-control-label" for="remember-me">Remember me</label>
+                </div><a class="navi-link" href="account-password-recovery.html">Forgot password?</a>
+              </div>
+            </div>
+            <div class="wizard-footer text-right">
+              <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+          </form>
+      </div>
+      <div class="col-md-3"></div>
+
+      {% comment %} <div class="col-md-6 pb-0">
+      
+              <section class="container py-0 my-0 my-md-0" id="services">
+                  <!-- <h2 class="h3 block-title text-center">We provide tranings in</h2> -->
+                  <div class="row pt-0">
+                    <!-- Service-->
+                    <div class="col-md-6"><a class="icon-box icon-box-horizontal d-sm-table text-center text-sm-left text-decoration-none" href="#">
+                        <div class="d-sm-table-cell align-top">
+                          <div class="icon-box-image"><img src="{% static 'img/components/icon-box/04.png' %}  " alt="Image icon"></div>
+                        </div>
+                        <div class="d-sm-table-cell align-top pl-sm-4">
+                          <h3 class="icon-box-title">Monitoring ranking</h3>
+                          <!-- <p class="icon-box-text text-sm mb-0">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.</p> -->
+                        </div></a></div>
+                    <!-- Service-->
+                    <div class="col-md-6"><a class="icon-box icon-box-horizontal d-sm-table text-center text-sm-left text-decoration-none" href="#">
+                        <div class="d-sm-table-cell align-top">
+                          <div class="icon-box-image"><img src="{% static 'img/components/icon-box/05.png' %} " alt="Image icon"></div>
+                        </div>
+                        <div class="d-sm-table-cell align-top pl-sm-4">
+                          <h3 class="icon-box-title">Pay per click</h3>
+                          <!-- <p class="icon-box-text text-sm mb-0">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.</p> -->
+                        </div></a></div>
+                    <!-- Service-->
+                    <div class="col-md-6"><a class="icon-box icon-box-horizontal d-sm-table text-center text-sm-left text-decoration-none" href="#">
+                        <div class="d-sm-table-cell align-top">
+                          <div class="icon-box-image"><img src="{% static '/img/components/icon-box/06.png' %} " alt="Image icon"></div>
+                        </div>
+                        <div class="d-sm-table-cell align-top pl-sm-4">
+                          <h3 class="icon-box-title">Google analytics</h3>
+                          <!-- <p class="icon-box-text text-sm mb-0">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.</p> -->
+                        </div></a></div>
+                    <!-- Service-->
+                    <div class="col-md-6"><a class="icon-box icon-box-horizontal d-sm-table text-center text-sm-left text-decoration-none" href="#">
+                        <div class="d-sm-table-cell align-top">
+                          <div class="icon-box-image"><img src="{% static '/img/components/icon-box/02.png' %} " alt="Image icon"></div>
+                        </div>
+                        <div class="d-sm-table-cell align-top pl-sm-4">
+                          <h3 class="icon-box-title">Social marketing</h3>
+                          <!-- <p class="icon-box-text text-sm mb-0">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.</p> -->
+                        </div></a></div>
+                    <!-- Service-->
+                    <div class="col-md-6"><a class="icon-box icon-box-horizontal d-sm-table text-center text-sm-left text-decoration-none" href="#">
+                        <div class="d-sm-table-cell align-top">
+                          <div class="icon-box-image"><img src="{% static '/img/components/icon-box/07.png' %} " alt="Image icon"></div>
+                        </div>
+                        <div class="d-sm-table-cell align-top pl-sm-4">
+                          <h3 class="icon-box-title">Email marketing</h3>
+                          <!-- <p class="icon-box-text text-sm mb-0">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.</p> -->
+                        </div></a></div>
+                    <!-- Service-->
+                    <div class="col-md-6"><a class="icon-box icon-box-horizontal d-sm-table text-center text-sm-left text-decoration-none" href="#">
+                        <div class="d-sm-table-cell align-top">
+                          <div class="icon-box-image"><img src="{% static 'img/components/icon-box/03.png' %} " alt="Image icon"></div>
+                        </div>
+                        <div class="d-sm-table-cell align-top pl-sm-4">
+                          <h3 class="icon-box-title">Map optimization</h3>
+                          <!-- <p class="icon-box-text text-sm mb-0">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non, euismod venenatis mi. Curabitur quis vehicula metus, eget ultrices quam.</p> -->
+                        </div></a></div>
+                  </div>
+                  <!-- <div class="text-center pt-2"><a class="btn btn-primary" href="services.html">More >></a></div> -->
+                </section>
+            <!-- </div> -->
+        
+      </div> {% endcomment %}
+    </div>
+  </div>
+
+{% endblock %}
