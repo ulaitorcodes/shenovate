@@ -161,8 +161,16 @@ STATICFILES_DIRS = [
 
 STATIC_URL = '/static/'
 
+# MEDIA_URL = '/media/'
+# STATICFILES_DIRS=[BASE_DIR +"/assets",]
+# STATIC_ROOT='/home/posxgabw/django_app/shenovate_site_project/static'
+# MEDIA_ROOT='/home/posxgabw/django_app/shenovate_site_project/media'
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 ]
+
+LOGIN_REDIRECT_URL = "profile"
+LOGOUT_REDIRECT_URL = "home"
