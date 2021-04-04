@@ -10,7 +10,9 @@
       <div class="col-md-3"></div>
 
       <div class="col-md-6 pb-5 pt-30 ml-30">
-       <form class="needs-validation wizard" novalidate>
+          <form class="needs-validation wizard" novalidate method="POST">
+            {% csrf_token %}
+
             <div class="wizard-body pt-2">
               {% comment %} <div class="d-sm-flex justify-content-between pb-2"><a class="btn btn-secondary btn-sm btn-block my-2 mr-3" href="#"><i class="socicon-facebook"></i>&nbsp;Login</a><a class="btn btn-secondary btn-sm btn-block my-2 mr-3" href="#"><i class="socicon-twitter"></i>&nbsp;Login</a><a class="btn btn-secondary btn-sm btn-block my-2 mr-3" href="#"><i class="socicon-linkedin"></i>&nbsp;Login</a></div> {% endcomment %}
               <hr>

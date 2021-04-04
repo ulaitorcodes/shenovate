@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 # from . import allauth
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = 'kpnskq&u6k)7_evr08@#&5xd*30x-avipez&nb^=ixwzdw765='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shenovate.com', 'www.shenovate.com']
 
 
 # Application definition
@@ -154,12 +155,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
+    os.path.join(BASE_DIR,'assets'),
 ]
 
-STATIC_URL = '/static/'
+STATIC_ROOT= os.path.join(BASE_DIR,'static')
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     '/var/www/static/',
+# ]
+
+# STATIC_URL = '/static/'
 
 # MEDIA_URL = '/media/'
 # STATICFILES_DIRS=[BASE_DIR +"/assets",]
